@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -49,12 +50,7 @@
                </image>
             </ImageView>
             <ImageView fitHeight="37.0" fitWidth="52.0" layoutX="501.0" layoutY="362.0" pickOnBounds="true" preserveRatio="true" />
-            <JFXTextField focusColor="#f5e916" labelFloat="true" layoutX="397.0" layoutY="96.0" text="Username" unFocusColor="#11e42d">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font>
-            </JFXTextField>
-            <JFXTextField focusColor="#0de458" labelFloat="true" layoutX="397.0" layoutY="149.0" prefHeight="25.0" prefWidth="169.0" text="password" unFocusColor="#9dfc0e">
+            <JFXTextField fx:id="Username" focusColor="#f5e916" labelFloat="true" layoutX="397.0" layoutY="96.0" promptText="Username" unFocusColor="#11e42d">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -65,9 +61,14 @@
                </image>
             </ImageView>
             <Label layoutX="374.0" layoutY="362.0" />
-            <Label contentDisplay="CENTER" layoutX="505.0" layoutY="200.0" prefHeight="25.0" prefWidth="45.0" style="-fx-background-color: #76ffff;" text="Login" />
+            <Label fx:id="btnlogin" contentDisplay="CENTER" layoutX="505.0" layoutY="200.0" prefHeight="25.0" prefWidth="45.0" style="-fx-background-color: #76ffff;" text="Login" />
             <Label layoutX="383.0" layoutY="378.0" prefHeight="17.0" prefWidth="207.0" />
-            <Label layoutX="334.0" layoutY="47.0" prefHeight="25.0" prefWidth="248.0" />
+            <Label fx:id="loginStatus" layoutX="334.0" layoutY="47.0" prefHeight="25.0" prefWidth="248.0" />
+            <JFXPasswordField fx:id="Password" layoutX="391.0" layoutY="149.0" promptText="Password" unFocusColor="#11e42d">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXPasswordField>
          </children>
       </AnchorPane>
    </children>
