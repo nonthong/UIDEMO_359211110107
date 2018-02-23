@@ -28,6 +28,9 @@ public class Controller  implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        if (this.loginModel.isDatabaseConnetcion)
+        if (this.loginModel.isDatabaseConnetcion())
+            this dbStatus.setText("connected to db");
+    }else{
+
     }
 }//class

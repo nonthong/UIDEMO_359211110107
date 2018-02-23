@@ -12,7 +12,8 @@ public class loginModel {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        if ()
+        if (this.Connection ==null) {
+        }
     }
 
 
