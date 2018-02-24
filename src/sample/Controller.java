@@ -1,7 +1,10 @@
 package sample;
 
+import admin.adminController;
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -10,9 +13,10 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
-
 public class Controller  implements Initializable{
     private loginModel loginModel = new loginModel();
 
@@ -42,7 +46,7 @@ public class Controller  implements Initializable{
     public void Login(ActionEvent event) {
         try {
             if (this.loginModel.isLogin(username.getText(),password.getText())){
-                Stage stage = (Stage) this.btnLogin.getScene().getWindow();
+                Stage stage = (Stage) this.btnlogin.getScene().getWindow();
                 stage.close();
                 adminDashboard();
 
