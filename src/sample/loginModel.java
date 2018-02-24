@@ -1,6 +1,10 @@
 package sample;
 
+import dbUtil.dbConnection;
+
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class loginModel {
@@ -18,7 +22,7 @@ public class loginModel {
     }//loginModel
 
     public boolean isDatabaseConnection() {
-        return this.connection != null;
+        return this.Connection != null;
     }//isDatabaseConnection
 
     public boolean isLogin(String user, String pass) throws SQLException {
@@ -27,7 +31,7 @@ public class loginModel {
 
         String sql = "select * from user where username = ? and password = ?";
         try {
-            pr = this.connection.prepareStatement(sql);
+            pr = this.Connection.prepareStatement(sql);
             pr.setString(1,user);
             pr.setString(2,pass);
             rs = pr.executeQuery();
