@@ -13,7 +13,7 @@ public class Controller  implements Initializable{
     private loginModel loginModel = new loginModel();
 
     @FXML
-    private JFXTextField Username;
+    private JFXTextField username;
 
     @FXML
     private Label btnlogin;
@@ -22,15 +22,51 @@ public class Controller  implements Initializable{
     private Label loginStatus;
 
     @FXML
-    private JFXPasswordField Password;
+    private JFXPasswordField password;
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        if (this.loginModel.isDatabaseConnection()) {
+            this.dbStatus.setText("Connected to DB.");
+        }else {
+            this.dbStatus.setText("Not Connect to DB.");
+        }
+    }//initialize
 
-        if (this.loginModel.isDatabaseConnetcion())
-            this dbStatus.setText("connected to db");
-    }else{
+    @FXML
+    public void Login(ActionEvent event) {
+        try {
+            if (this.loginModel.isLogin(username.getText(),password.getText())){
+                Stage stage = (Stage) this.btnLogin.getScene().getWindow();
+                stage.close();
+                adminDashboard();
 
-    }
-}//class
+            }else {
+                loginStatus.setText("Your username or password is invalid");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }//Login
+
+    private void adminDashboard() {
+        try {
+            Stage adminStage = new Stage();
+            FXMLLoader adminLoader = new FXMLLoader();
+            Pane adminRoot = (Pane) adminLoader.load(
+                    getClass().getResource("/admin/adminDashboard.fxml").openStream());
+            adminController adminController = adminLoader.getController();
+            Scene scene = new Scene(adminRoot);
+            adminStage.setScene(scene);
+            adminStage.setTitle("Admin Dashboard");
+            adminStage.setResizable(false);
+            adminStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+    }//adminDashboard
+
+}
