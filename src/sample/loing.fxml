@@ -50,7 +50,7 @@
                </image>
             </ImageView>
             <ImageView fitHeight="37.0" fitWidth="52.0" layoutX="501.0" layoutY="362.0" pickOnBounds="true" preserveRatio="true" />
-            <JFXTextField fx:id="Username" focusColor="#f5e916" labelFloat="true" layoutX="397.0" layoutY="96.0" promptText="Username" unFocusColor="#11e42d">
+            <JFXTextField fx:id="username" focusColor="#f5e916" labelFloat="true" layoutX="397.0" layoutY="96.0" promptText="Username" unFocusColor="#11e42d">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -63,7 +63,7 @@
             <Label layoutX="374.0" layoutY="362.0" />
             <Label fx:id="dbStatus" layoutX="383.0" layoutY="378.0" prefHeight="17.0" prefWidth="207.0" />
             <Label fx:id="loginStatus" layoutX="334.0" layoutY="47.0" prefHeight="25.0" prefWidth="248.0" />
-            <JFXPasswordField fx:id="Password" layoutX="391.0" layoutY="149.0" promptText="Password" unFocusColor="#11e42d">
+            <JFXPasswordField fx:id="password" layoutX="391.0" layoutY="149.0" promptText="Password" unFocusColor="#11e42d">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
