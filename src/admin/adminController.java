@@ -196,7 +196,4 @@ public class adminController implements Initializable {
 
     }//deleteStudent
 
-
-
-
 }//class
