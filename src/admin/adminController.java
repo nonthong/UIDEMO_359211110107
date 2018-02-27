@@ -1,6 +1,6 @@
 package admin;
 
-<<<<<<< HEAD
+
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
@@ -205,7 +205,3 @@ public class adminController implements Initializable {
         this.btnLoad = btnLoad;
     }
 }//class
-=======
-public class adminController {
-}
->>>>>>> origin/master
